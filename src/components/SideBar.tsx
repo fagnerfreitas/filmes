@@ -8,7 +8,7 @@ interface GenreResponseProps {
   name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
   title: string;
   selectedGenreId:number;
-  handleClickButton:() => number
+  handleClickButton:(id:number) => number
 }
 
 import { Button } from '../components/Button';
@@ -19,7 +19,7 @@ export function SideBar(props:GenreResponseProps) {
   const [genres, setGenres] = useState<GenreResponseProps[]>([]);
   
   useEffect(() => {
-    api.get<GenreResponseProps[]>('genres').then(response => {
+    api.get<GenreResponseProps[]>('genres').then( response => {
       setGenres(response.data);
     });
   }, []);

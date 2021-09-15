@@ -11,8 +11,13 @@ interface MovieProps {
     Value: string;
   }>;
   Runtime: string;
-  movies:[]
+  selectedGenre:{
+    title:String
+  }
+  
 }
+
+
 
 
 export function Content(props:MovieProps) {

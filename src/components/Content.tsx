@@ -13,7 +13,8 @@ interface MovieProps {
   Runtime: string;
   selectedGenre:{
     title:String
-  }
+  },
+  movies:{}
   
 }
 
